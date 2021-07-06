@@ -1,0 +1,28 @@
+<section class="todos__list">
+	<div class="todos__list-name">
+		<p class="todos__list-title"> <%= section_title %> </p>
+		<p class="todos__list-status"> <%= todos.completed.count %>/<%= todos.count %> </p>
+	</div>
+	<ul class="todos__list-contents">
+
+		<% todos.each do |todo| %>
+			<li>
+				<input type="checkbox" name="completion_status" 
+					<% if todo.completed %> checked <% end%>
+				/>
+				<span class=<% if todo.completed%>"text-strike"<%end%>>
+					<%= todo.todo_text %>
+				</span>
+				<% if show_due_date%>
+					<span class="todos__item-status">
+						<%=todo.due_date.to_s(:short) %>
+					</span>
+				<% end %>
+				<a href="#" class="todos__item-delete">
+					<img src="delete_icon.png" />
+				</a>
+			</li>
+		<% end %>
+
+	</ul>
+</section>

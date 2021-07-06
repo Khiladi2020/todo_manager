@@ -97,3 +97,6 @@ body {
 .todo__overdue {
 	color: tomato;
 }
+.text-strike{
+	text-decoration: line-through;
+}
