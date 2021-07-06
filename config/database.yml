@@ -26,3 +26,5 @@ test:
 production:
   <<: *default
   database: prod_saas_db
+  username: postgres
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
