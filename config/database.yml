@@ -24,4 +24,5 @@ test:
   database: test_saas_db
 
 production:
-  database: <%= ENV['DATABASE_URL'] %>
+  <<: *default
+  database: prod_saas_db
