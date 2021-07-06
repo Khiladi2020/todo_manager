@@ -24,4 +24,4 @@ test:
   database: test_saas_db
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV['DATABASE_URL'] %>
