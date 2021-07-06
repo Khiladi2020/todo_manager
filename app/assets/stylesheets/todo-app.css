@@ -8,6 +8,17 @@ body {
 	font-family: "Open Sans", sans-serif;
 	color: #453c52;
 }
+.app_container{
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.text-center{
+	text-align: center;
+}
+.text-detail{
+	padding: 10px;
+}
 .todos__main {
 	max-width: 450px;
 	margin: 0 auto;
