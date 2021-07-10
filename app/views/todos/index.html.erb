@@ -1,7 +1,7 @@
 <main class="todos__container">
 	<article class="todos__main">
 		<h1 class="todos__heading">My To-do List</h1>
-		<section class="todos__add">
+		<form class="todos__add" action="/todos" method="POST">
 			<input
 				type="text"
 				name="todo_text"
@@ -9,8 +9,8 @@
 				placeholder="What's next?"
 			/>
 			<input type="date" name="due_date" id="due_date" />
-			<button class="btn">Add</button>
-		</section>
+			<button class="btn" type="submit">Add</button>
+		</form>
 
 		<%= render partial: "todo-section", locals: {
 			section_title: "Overdue",
