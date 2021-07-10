@@ -7,10 +7,13 @@
 
 		<% todos.each do |todo| %>
 			<li>
-				<input type="checkbox" name="completion_status" 
-					<% if todo.completed %> checked <% end%>
-				/>
-				<span class=<% if todo.completed%>"text-strike"<%end%>>
+				<%= form_with url:"/todos/#{todo.id}", method: :put do %>
+					<input type="checkbox" name="completed" 
+						<% if todo.completed %> checked <% end%>
+						onclick="this.form.submit()"
+					/>
+				<%end%>
+				<span class=<%= todo.completed ? "text-strike" : "" %> >
 					<%= todo.todo_text %>
 				</span>
 				<% if show_due_date%>
